@@ -1,4 +1,4 @@
-# Etsiit Bot
+# ETSIIT Bot
 
 <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 

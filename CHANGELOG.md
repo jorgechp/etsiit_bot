@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Populated README.md with a brief description of the project.
 - Added LICENSE.txt file.
 - Some initial WIKI pages.
+- Added Python gitignore.
+- Added new badge to informm about new releases.
 
 [Unreleased]: https://github.com/jorgechp/etsiit_bot/compare/v0.0.1...HEAD
 [0.0.1]: https://github.com/jorgechp/etsiit_bot/releases/tag/v0.0.1

@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add Issues and Pull-Request templates.
+- Configure repository to perform CI/CD by adding a tox configuration file and a workflow.
+
+### Modified
+
+- Moved bot code to it's own module.
 
 ## [0.0.1] - 2020-04-27
 
@@ -22,4 +27,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/jorgechp/etsiit_bot/compare/v0.0.1...HEAD
 [0.0.1]: https://github.com/jorgechp/etsiit_bot/releases/tag/v0.0.1
-

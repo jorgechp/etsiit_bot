@@ -1,29 +1,30 @@
 import flask, telebot
-from bot import bot
+from etsiit_bot.bot import bot
+from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve(strict=True).parents[1]
 app = flask.Flask(__name__)
-WEBHOOK_URL_PATH = "/{}".format(bot.token)
-index = open('static/index.html').read()
+WEBHOOK_URL_PATH = f"/{bot.token}"
+index = open(REPO_ROOT.joinpath("static", "index.html")).read()
 
 
 # Process index page
-@app.route('/')
+@app.route("/")
 def root():
-    print('index!')
-    return index # 'xd' # flask.send_from_directory('/static', 'index.html')
+    return index
 
 
 # Process webhook calls
-@app.route(WEBHOOK_URL_PATH, methods=['POST'])
+@app.route(WEBHOOK_URL_PATH, methods=["POST"])
 def webhook():
-    if flask.request.headers.get('content-type') == 'application/json':
-        json_string = flask.request.get_data().decode('utf-8')
+    if flask.request.headers.get("content-type") == "application/json":
+        json_string = flask.request.get_data().decode("utf-8")
         update = telebot.types.Update.de_json(json_string)
         bot.process_new_updates([update])
-        return ''
+        return ""
     else:
         flask.abort(403)
 
+
 if __name__ == "__main__":
-  
-  app.run()
+    app.run()

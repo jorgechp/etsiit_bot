@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add Issues and Pull-Request templates.
-- Configure repository to perform CI/CD by adding a tox configuration file and a workflow.
+- Configure repository to perform CI/CD by adding a tox configuration file and a workflow trigger.
 
 ### Modified
 

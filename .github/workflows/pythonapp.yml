@@ -8,6 +8,11 @@ on:
     branches: 
       - master
       - develop
+    paths:
+      - etsiit_bot/
+      - tests/
+      - noxfile.py
+      - glitch.json
   pull_request:
     branches:
       - master

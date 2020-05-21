@@ -25,7 +25,6 @@ jobs:
           python-version: '3.x'
       - name: Install necessary tools
         run: |
-          pip install -U nox
-          gem install mdl
+          pip install -U pip nox
       - name: Perform linting
         run: nox -k 'test'

@@ -1,0 +1,31 @@
+on:
+  push:
+    branches: 
+      - master
+      - develop
+    paths:
+      - 'etsiit_bot/'
+      - 'tests/'
+      - 'noxfile.py'
+      - 'glitch.json'
+      - '**/*.md'
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: "Code testing"
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install necessary tools
+        run: |
+          pip install -U nox
+          gem install mdl
+      - name: Perform linting
+        run: nox -k 'test'

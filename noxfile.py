@@ -40,7 +40,7 @@ def lint_python(session):
 def lint_markdown(session):
     """Lint Markdown files."""
     session.log("# Linting Markdown files...")
-    session.run("mdl", ".")
+    session.run("mdl", "--style", ".mdl.rb", ".", external=True)
 
 
 ###############################################################################

@@ -1,6 +1,10 @@
+defaults:
+  run:
+    shell: bash
+
 on:
   push:
-    branches: 
+    branches:
       - master
       - develop
     paths:
@@ -19,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     name: "Code testing"
     steps:
+      - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
         with:

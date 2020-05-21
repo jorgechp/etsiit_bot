@@ -1,6 +1,10 @@
+defaults:
+  run:
+    shell: bash
+
 on:
   push:
-    branches: 
+    branches:
       - master
       - develop
     paths:
@@ -19,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     name: "Code and documentation linting"
     steps:
+      - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -29,7 +34,8 @@ jobs:
           ruby-version: 2.6
       - name: Install necessary tools
         run: |
-          pip install -U nox
+          pip install -U pip nox
           gem install mdl
       - name: Perform linting
+        working-directory: ${{ github.workspace }}
         run: nox -k 'lint'

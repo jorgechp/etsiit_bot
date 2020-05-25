@@ -27,7 +27,6 @@ def lint_python(session):
     """Lint Python source code."""
     session.log("# Linting Python files...")
     session.install(*lint_requirements)
-    session.install(*format_requirements)
     session.run("pylint", *python_target_files)
     session.run("mypy", *python_target_files)
     session.run("flake8", *python_target_files)

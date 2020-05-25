@@ -31,5 +31,6 @@ jobs:
       - name: Install necessary tools
         run: |
           pip install -U pip nox
-      - name: Perform linting
+      - name: Run tests
+        working-directory: ${{ github.workspace }}
         run: nox -k 'test'

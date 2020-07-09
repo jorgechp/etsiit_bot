@@ -1,3 +1,2 @@
-Flask
-PyTelegramBotAPI
+python-telegram-bot
 python-decouple

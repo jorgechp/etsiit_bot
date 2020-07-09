@@ -1,18 +1,24 @@
+# Copyright (c) 2020 Jorge Chamorro Padiel, Luis Liñán Villafranca. All rights
+# reserved.
+# This work is licensed under the terms of the MIT license.
+# For a copy, see <https://opensource.org/licenses/MIT>
 """Nox test automation file."""
-import nox
 from typing import List
 
+import nox
 
-test_requirements: List[str] = ["pytest", "pytest-cov"]
+requirements: List[str] = ["-r", "requirements.txt"]
+test_requirements: List[str] = [*requirements, "pytest", "pytest-cov"]
 format_requirements: List[str] = ["black", "isort"]
 lint_requirements: List[str] = [
+    *requirements,
     *format_requirements,
     "pylint",
     "mypy",
     "flake8",
     "pycodestyle",
 ]
-python_target_files = ["etsiit_bot", "tests"]
+python_target_files = ["etsiit_bot/", "tests/"]
 python = ["3.6", "3.7", "3.8"]
 
 nox.options.reuse_existing_virtualenvs = True
@@ -32,7 +38,7 @@ def lint_python(session):
     session.run("flake8", *python_target_files)
     session.run("pycodestyle", *python_target_files)
     session.run("black", "-l", "79", "--check", "--diff", *python_target_files)
-    session.run("isort", "--check-only", "--diff", *python_target_files)
+    session.run("isort", "-rc", "--check-only", "--diff", *python_target_files)
 
 
 @nox.session()
@@ -62,4 +68,12 @@ def tests(session):
     """Run python tests."""
     session.log("# Running tests...")
     session.install(*test_requirements)
-    session.run("pytest")
+    session.run(
+        "pytest",
+        env={
+            "REPO_ROOT": "REPO_ROOT_dummy",
+            "TELEGRAM_TOKEN": "TELEGRAM_TOKEN_dummy",
+            "PROJECT_NAME": "PROJECT_NAME_dummy",
+            "PORT": "123",
+        },
+    )

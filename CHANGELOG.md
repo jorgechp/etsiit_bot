@@ -2,8 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on
+[Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project
+adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
@@ -12,7 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Issues and Pull-Request templates.
 - Configure repository to perform CI/CD by adding a `nox` configuration file
   and two workflows for GitHub Actions.
-- New `pytest` and `isort` config files.
+- New `pytest`, `pytest-cov` and `isort` config files.
+- Change from `pyTelegramBotAPI` to `python-telegram-bot` due to easy built-in
+  webhook integration and great documentation.
+- Add tests for the `etsiit_bot` module.
+- Modify `glitch.json` to match new bot settings.
 
 ### Modified
 

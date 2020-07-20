@@ -1,0 +1,36 @@
+defaults:
+  run:
+    shell: bash
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+    paths:
+      - 'etsiit_bot/'
+      - 'tests/'
+      - 'noxfile.py'
+      - 'glitch.json'
+      - '**/*.md'
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: "Code testing"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install necessary tools
+        run: |
+          pip install -U pip nox
+      - name: Run tests
+        working-directory: ${{ github.workspace }}
+        run: nox -k 'test'

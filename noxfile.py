@@ -8,15 +8,19 @@ from typing import List
 import nox
 
 requirements: List[str] = ["-r", "requirements.txt"]
-test_requirements: List[str] = [*requirements, "pytest", "pytest-cov"]
-format_requirements: List[str] = ["black", "isort"]
+test_requirements: List[str] = [
+    *requirements,
+    "pytest==5.4.3",
+    "pytest-cov==2.10.0",
+]
+format_requirements: List[str] = ["black==19.10b0", "isort==4.3.21"]
 lint_requirements: List[str] = [
     *requirements,
     *format_requirements,
-    "pylint",
-    "mypy",
-    "flake8",
-    "pycodestyle",
+    "pylint==2.5.3",
+    "mypy==0.782",
+    "flake8==3.8.3",
+    "pycodestyle==2.6.0",
 ]
 python_target_files = ["etsiit_bot/", "tests/"]
 python = ["3.6", "3.7", "3.8"]

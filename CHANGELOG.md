@@ -8,6 +8,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.0] - 2020-07-20
+
+
 ### Added
 
 - Add Issues and Pull-Request templates.
@@ -23,6 +26,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - Moved bot code to it's own module.
 
+
 ## [0.0.1] - 2020-04-27
 
 ### Added
@@ -33,5 +37,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Added LICENSE.txt file.
 - Some initial WIKI pages.
 
-[Unreleased]: https://github.com/jorgechp/etsiit_bot/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/jorgechp/etsiit_bot/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/jorgechp/etsiit_bot/releases/tag/v0.1.0
 [0.0.1]: https://github.com/jorgechp/etsiit_bot/releases/tag/v0.0.1
+

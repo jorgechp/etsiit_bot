@@ -1,19 +1,19 @@
 ---
 
-name: Reporte de problema
-about: Crea un reporte para mejorar el bot
+name: Bug report
+about: Generates a bug report to improve the bot
 title: "BUG:"
 labels: "bug"
 
 ---
 
-## Descripción del problema
+## Bug description
 
-## Pasos para reproducir el problema
+## Steps needed to reproduce the bug
 
 <!--
-1. Paso 1
-2. Paso 2
+1. First step
+2. Second step
 ...
 -->
 

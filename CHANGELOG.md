@@ -8,6 +8,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Modified
+
+- Translated the issue templates into English.
+
 ## [0.1.0] - 2020-07-20
 
 ### Added

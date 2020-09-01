@@ -1,11 +1,11 @@
 ---
 
-name: Proposición de mejora
-about: Crea una proposición de mejora para el bot
+name: Improvement suggestion
+about: Suggest an improvement for the bot
 title: "ENH:"
 labels: "enhancement"
 
 ---
 
-## Descripción de la proposición de mejora
+## Enhancement description
 

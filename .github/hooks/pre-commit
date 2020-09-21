@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Perform linting before commiting the staged changes.
+# You can run this script manually executing it or you can create a soft link
+# to the git/hooks folder running the following command from the reprository
+# root:
+#
+# $ ln -sf $PWD/.github/hooks/pre-commit .git/pre-commit
+
+prog_found () {
+    printf "$(command -v "$1" >/dev/null 2>&1)"
+}
+
+if ! prog_found "mdl"; then
+   printf 'Please, install mdl utility with:\n\tgem install mdl\n'
+   exit 1
+fi
+
+if ! prog_found "nox"; then
+   printf 'Please, install nox utility with:\n\tpip install nox\n'
+fi
+
+nox -k lint

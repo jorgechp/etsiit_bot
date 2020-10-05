@@ -31,3 +31,47 @@ Bot](https://github.com/python-telegram-bot/python-telegram-bot).
 Para más información, échale un vistazo a la [Wiki del
 proyecto](https://github.com/jorgechp/etsiit_bot/wiki).
 
+## Ejecutar test y pasar la prueba del algodón
+
+Para la automatización del proyecto utilizamos
+[`nox`](https://github.com/theacodes/nox), herramienta la cual se puede
+instalar ejecutando:
+
+```bash
+pip install nox
+```
+
+Una vez instalado, es posible ver una lista de opciones disponibles con el
+siguiente comando:
+
+```bash
+nox -l
+```
+
+Ahora, para ejecutar las herramientas de linting sobre el código de Python:
+
+```bash
+nox -e lintpy
+```
+
+Si queremos pasar la herramienta de lint para los archivos Markdown es
+necesario instalar el siguiente paquete de ruby:
+[gem](https://github.com/markdownlint/markdownlint). Para ello escribimos lo
+siguiente en el intérprete de órdenes:
+
+```bash
+gem install mdl
+```
+
+Finalmente para usar el linter de Markdown:
+
+```bash
+nox -e lintmd
+```
+
+Si queremos correr los tests podemos introducir el siguiente comando:
+
+```bash
+nox -e test
+```
+

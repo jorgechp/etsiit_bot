@@ -32,7 +32,7 @@ nox.options.stop_on_first_error = False
 ###############################################################################
 # Linting
 ###############################################################################
-@nox.session()
+@nox.session(name="lintpy")
 def lint_python(session):
     """Lint Python source code."""
     session.log("# Linting Python files...")
@@ -45,7 +45,7 @@ def lint_python(session):
     session.run("isort", "-rc", "--check-only", "--diff", *python_target_files)
 
 
-@nox.session()
+@nox.session(name="lintmd")
 def lint_markdown(session):
     """Lint Markdown files."""
     session.log("# Linting Markdown files...")

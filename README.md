@@ -5,11 +5,13 @@
 ![.github/workflows/test.yml](https://github.com/jorgechp/etsiit_bot/workflows/.github/workflows/test.yml/badge.svg?branch=master)
 ![.github/workflows/lint.yml](https://github.com/jorgechp/etsiit_bot/workflows/.github/workflows/lint.yml/badge.svg?branch=master)
 
+## Descripción
+
 **ETSIIT Bot** es un Bot de Telegram que tiene como finalidad ofrecer
-información sobre diferentes servicios y herramientas de la
-[Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación
-(ETSIIT)](https://etsiit.ugr.es/)
-de la [Universidad de Granada](https://www.ugr.es/).
+información sobre diferentes servicios y herramientas de la [Escuela Técnica
+Superior de Ingenierías Informática y de Telecomunicación
+(ETSIIT)](https://etsiit.ugr.es/) de la
+[Universidad de Granada](https://www.ugr.es/).
 
 ETSIIT Bot te facilita:
 
@@ -23,9 +25,9 @@ ETSIIT Bot te facilita:
   [Delegación de Estudiantes](https://deiit.ugr.es/),
   [Antiguos Estudiantes](https://aesit.es/)...
 
-Este bot está basado en un esqueleto creado por
-[Peka en telegram](https://t.me/zPeka) siguiendo su
-[tutorial](https://telegra.ph/Creando-Bots-en-Telegram-06-09).
+Este bot está basado en un esqueleto ejemplo del paquete de [Python Telegram
+Bot](https://github.com/python-telegram-bot/python-telegram-bot).
 
-Para más información, échale un vistazo a la
-[Wiki del proyecto](https://github.com/jorgechp/etsiit_bot/wiki).
+Para más información, échale un vistazo a la [Wiki del
+proyecto](https://github.com/jorgechp/etsiit_bot/wiki).
+

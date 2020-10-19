@@ -8,6 +8,20 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- Created CODE_OF_CONDUCT.md
+- Add a pre-commit hook to run tests before commiting.
+- Added CONTRIBUTING.md
+
+### Modified
+
+- Translated the issue templates into English.
+
+### Deleted
+
+- Deleted the default workflow pythonapp.yml
+
 ## [0.1.0] - 2020-07-20
 
 ### Added

@@ -1,9 +1,9 @@
 ---
-
 name: Bug report
 about: Generates a bug report to improve the bot
-title: "BUG:"
-labels: "bug"
+title: 'BUG:'
+labels: bug
+assignees: ''
 
 ---
 
@@ -16,4 +16,3 @@ labels: "bug"
 2. Second step
 ...
 -->
-

@@ -22,7 +22,7 @@ lint_requirements: List[str] = [
     "flake8==3.8.3",
     "pycodestyle==2.6.0",
 ]
-python_target_files = ["etsiit_bot/", "tests/"]
+python_target_files = ["etsiit_bot/", "tests/", "etsiit/"]
 python = ["3.6", "3.7", "3.8"]
 
 nox.options.reuse_existing_virtualenvs = True

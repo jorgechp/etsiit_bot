@@ -1,4 +1,4 @@
-# Copyright (c) 2020 Jorge Chamorro Padiel, Luis Liñán Villafranca. All rights
+# Copyright (c) 2020 Jorge Chamorro Padial, Luis Liñán Villafranca. All rights
 # reserved.
 # This work is licensed under the terms of the MIT license.
 # For a copy, see <https://opensource.org/licenses/MIT>
@@ -17,15 +17,16 @@ format_requirements: List[str] = ["black==19.10b0", "isort==4.3.21"]
 lint_requirements: List[str] = [
     *requirements,
     *format_requirements,
-    "pylint==2.5.3",
+    "pylint==2.6.0",
     "mypy==0.782",
     "flake8==3.8.3",
     "pycodestyle==2.6.0",
 ]
-python_target_files = ["etsiit_bot/", "tests/"]
+python_target_files = ["etsiit_bot/", "tests/", "etsiit/"]
 python = ["3.6", "3.7", "3.8"]
 
-nox.options.reuse_existing_virtualenvs = True
+nox.options.force_venv_backend = "none"
+nox.options.reuse_existing_virtualenvs = False
 nox.options.stop_on_first_error = False
 
 
@@ -61,7 +62,7 @@ def python_format(session):
     session.log("# Formating Python files...")
     session.install(*format_requirements)
     session.run("black", "-l", "79", *python_target_files)
-    session.run("isort", *python_target_files)
+    session.run("isort", "-rc", *python_target_files)
 
 
 ###############################################################################

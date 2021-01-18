@@ -62,7 +62,7 @@ def python_format(session):
     session.log("# Formating Python files...")
     session.install(*format_requirements)
     session.run("black", "-l", "79", *python_target_files)
-    session.run("isort", *python_target_files)
+    session.run("isort", "-rc", *python_target_files)
 
 
 ###############################################################################

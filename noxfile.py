@@ -17,7 +17,7 @@ format_requirements: List[str] = ["black==19.10b0", "isort==4.3.21"]
 lint_requirements: List[str] = [
     *requirements,
     *format_requirements,
-    "pylint==2.5.3",
+    "pylint==2.6.0",
     "mypy==0.782",
     "flake8==3.8.3",
     "pycodestyle==2.6.0",
@@ -25,14 +25,15 @@ lint_requirements: List[str] = [
 python_target_files = ["etsiit_bot/", "tests/", "etsiit/"]
 python = ["3.6", "3.7", "3.8"]
 
-nox.options.reuse_existing_virtualenvs = True
+nox.options.force_venv_backend = "none"
+nox.options.reuse_existing_virtualenvs = False
 nox.options.stop_on_first_error = False
 
 
 ###############################################################################
 # Linting
 ###############################################################################
-@nox.session()
+@nox.session(name="lintpy")
 def lint_python(session):
     """Lint Python source code."""
     session.log("# Linting Python files...")
@@ -45,7 +46,7 @@ def lint_python(session):
     session.run("isort", "-rc", "--check-only", "--diff", *python_target_files)
 
 
-@nox.session()
+@nox.session(name="lintmd")
 def lint_markdown(session):
     """Lint Markdown files."""
     session.log("# Linting Markdown files...")

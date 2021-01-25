@@ -10,9 +10,16 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- Created CODE_OF_CONDUCT.md
-- Add a pre-commit hook to run tests before commiting.
-- Added CONTRIBUTING.md
+- Add Utils and Academic Info classes and their tests.
+
+## [0.2.0] - 2020-10-19
+
+### Added
+
+- Created CODE_OF_CONDUCT.md.
+- Add a pre-commit hook to run tests and lint before commiting.
+- Added CONTRIBUTING.md.
+- Added initial CI/CD Workflow.
 
 ### Modified
 
@@ -51,6 +58,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Added Python gitignore.
 - Added new badge to informm about new releases.
 
-[Unreleased]: https://github.com/jorgechp/etsiit_bot/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/jorgechp/etsiit_bot/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/jorgechp/etsiit_bot/releases/tag/v0.2.0
 [0.1.0]: https://github.com/jorgechp/etsiit_bot/releases/tag/v0.1.0
 [0.0.1]: https://github.com/jorgechp/etsiit_bot/releases/tag/v0.0.1

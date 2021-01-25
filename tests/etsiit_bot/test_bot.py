@@ -7,14 +7,7 @@ import unittest
 
 from unittest import TestCase, mock
 
-try:
-    from etsiit_bot import bot
-except ModuleNotFoundError:
-    from sys import path as syspath
-    from pathlib import Path
-
-    syspath.append(str(Path(__file__).parents[1].resolve()))
-    from etsiit_bot import bot
+from etsiit_bot import bot
 
 
 class TestBot(TestCase):

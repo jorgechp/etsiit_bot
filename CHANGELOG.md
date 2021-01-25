@@ -11,6 +11,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 
 - Add Utils and Academic Info classes and their tests.
+- Add setup.py to install and run the bot comfortably.
 
 ## [0.2.0] - 2020-10-19
 

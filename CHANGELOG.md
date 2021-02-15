@@ -8,6 +8,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0] - 2020-10-19
+
 ### Added
 
 - Add Utils and Academic Info classes and their tests.

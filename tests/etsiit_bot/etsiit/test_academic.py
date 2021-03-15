@@ -6,8 +6,8 @@
 
 from unittest import TestCase
 
-from etsiit.academic import AcademicInfo
-from etsiit.utils import Link
+from etsiit_bot.etsiit.academic import AcademicInfo
+from etsiit_bot.etsiit.utils import Link
 
 
 class TestAcademic(TestCase):

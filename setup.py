@@ -29,7 +29,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.7",
     ],
     entry_points={"console_scripts": ["etsiitbot=etsiit_bot.__main__:main"]},
-    packages=["etsiit", "etsiit_bot"],
+    packages=["etsiit_bot"],
     python_requires=">=3.6",
     install_requires=REQUIREMENTS,
     test_suite="tests",

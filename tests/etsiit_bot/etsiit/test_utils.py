@@ -6,7 +6,7 @@
 
 from unittest import TestCase
 
-from etsiit.utils import Link
+from etsiit_bot.etsiit.utils import Link
 
 
 class TestLink(TestCase):

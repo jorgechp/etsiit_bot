@@ -5,7 +5,7 @@
 """ Academic related functionalities"""
 from typing import Dict
 
-from etsiit.utils import Link
+from etsiit_bot.etsiit.utils import Link
 
 
 class AcademicInfo:
